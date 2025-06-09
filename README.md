@@ -1,43 +1,42 @@
 # 🏡 Home Sales Analysis – Module 22 Challenge
 
-This project uses **PySpark** and **Spark SQL** to analyze real estate sales data.  
-It was completed as part of the Data Analytics Bootcamp (Module 22 - Big Data with Spark).
+This project explores home sales data using **PySpark** and **Spark SQL**.  
+It was created for **Module 22: Big Data with Spark** in the Data Analytics Bootcamp.
 
 ---
 
 ## 📁 Project Structure
 
-- `Home_Sales.ipynb`: The main Colab notebook with all analysis steps
-- Data Source: `home_sales_revised.csv` (loaded from AWS or local upload)
+- `Home_Sales.ipynb` → Main analysis notebook (Google Colab or Jupyter compatible)  
+- `home_sales_revised.csv` → Input dataset (uploaded manually or accessed from AWS)
 
 ---
 
-## 🚀 Technologies Used
+## 🚀 Tools & Technologies
 
-- Python
-- PySpark
-- SparkSQL
-- Google Colab
-- Git & GitHub
-
----
-
-## ✅ Objectives
-
-The goal was to answer real-world questions using **PySpark SQL** on a home sales dataset.
+- Python  
+- PySpark  
+- Spark SQL  
+- Google Colab  
+- Jupyter Notebook  
+- Git & GitHub  
 
 ---
 
-## 🔍 Questions Answered
+## 🎯 Objectives
 
-1. **What is the average price of a four-bedroom house sold for each year?**
-2. **What is the average price of homes by year and bedroom count?**
-3. **What is the average price of homes with more than 2 bathrooms by year?**
-4. **What is the average price of homes with over 2000 square feet by year?**
+Analyze real-world housing data using Spark SQL to answer key business questions:
+
+1. 📅 What is the average price of 4-bedroom homes sold each year?  
+2. 🛏️ What is the average price of homes by year and bedroom count?  
+3. 🛁 What is the average price of homes with more than 2 bathrooms by year?  
+4. 🏠 What is the average price of homes with over 2000 square feet by year?  
+5. 📁 How does Parquet file performance compare with in-memory cache?  
+6. ⚡ What’s the speed difference between cached, uncached, and parquet queries?
 
 ---
 
-## 📊 Sample Output (from SQL queries)
+## 🔍 Sample Output
 
 | Year | Avg Price (4-Bedrooms) |
 |------|------------------------|
@@ -46,28 +45,32 @@ The goal was to answer real-world questions using **PySpark SQL** on a home sale
 | 2021 | $301,819.44            |
 | 2022 | $296,363.88            |
 
-*All outputs are shown in the notebook with `.show()` results.*
+> 📌 All outputs for every query are shown using `.show()` in the notebook.
 
 ---
 
-## ✍️ How It Works
+## 🛠️ Key Concepts Covered
 
-- Loaded CSV file into a PySpark DataFrame
-- Created a temporary view: `home_sales`
-- Used SQL queries to group, filter, and aggregate data
-- Rounded all averages to two decimal places
+- Loading CSV into a PySpark DataFrame  
+- Creating and querying Spark SQL temp views  
+- Aggregating and rounding results using SQL  
+- Writing and reading data using **Parquet** format  
+- Measuring performance with `time` module  
+- Using `.cache()` and `.uncache()` for memory management  
+
+---
+
+## ✅ Final Steps Added
+
+- Created temp table from Parquet file  
+- Queried and compared runtime from Parquet vs. cached vs. uncached  
+- Measured execution time for each approach  
+- Verified cache status using `is_cached`  
 
 ---
 
 ## 🙋‍♀️ Author
 
 **Anqa Javed**  
-Data Analytics Bootcamp Student  
+_Data Analytics Bootcamp Student_  
 GitHub: [@AnqaJaved](https://github.com/AnqaJaved)
-
----
-
-## 📌 Note
-
-This assignment was completed using **Google Colab**, but the notebook can also run on **Jupyter Notebook** with proper Spark setup.
-
